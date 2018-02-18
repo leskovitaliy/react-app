@@ -1,4 +1,5 @@
 import * as React from 'react';
+import Menu from "./Menu";
 
 class RegistrationForm extends React.Component {
     constructor(props) {
@@ -11,25 +12,28 @@ class RegistrationForm extends React.Component {
     }
 
     handleSubmit(event) {
-      event.preventDefault();
-      console.log('form is submitted. Email valid is', this.state['email']);
+        event.preventDefault();
+        console.log('form is submitted. Email valid is', this.state['email']);
     }
 
     handleEmailChange(event) {
-      console.log('change', event.target['value']);
-      this.setState({email: event.target['value']});
+        console.log('change', event.target['value']);
+        this.setState({email: event.target['value']});
     }
 
     render() {
         return (
-            <form onSubmit={this.handleSubmit}>
-                <input type="text"
-                       placeholder="E-mail"
-                       value={this.state['email']}
-                       onChange={this.handleEmailChange}
-                />
-                <button>Save</button>
-            </form>
+            <div>
+                <Menu />
+                <form onSubmit={this.handleSubmit}>
+                    <input type="text"
+                           placeholder="E-mail"
+                           value={this.state['email']}
+                           onChange={this.handleEmailChange}
+                    />
+                    <button>Save</button>
+                </form>
+            </div>
         )
     }
 }

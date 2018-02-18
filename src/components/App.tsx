@@ -1,6 +1,7 @@
 import * as React from 'react';
 import Dropdown from "./Dropdown";
 import Header from "./Header";
+import Menu from "./Menu";
 
 const menu = [
     {
@@ -21,7 +22,9 @@ class App extends React.Component {
     render() {
         return (
             <div>
-                {/*<Header items={menu} />*/}
+                <Menu />
+                {/*<Header name="Tom" />*/}
+                <Header items={menu} />
                 <Dropdown/>
             </div>
         );
