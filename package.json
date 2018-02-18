@@ -5,9 +5,8 @@
     "main": "index.js",
     "scripts": {
         "start": "webpack webpack-dev-server --watch",
-        "build": "NODE_ENV=production ./node_modules/.bin/webpack",
-        "serve": "ENV=development PORT=9002 PROXY_URL=localhost: PUBLIC=localhost: webpack-dev-server",
-        "serve-windows": "cross-env ENV=development PORT=3000 PROXY_URL=localhost: PUBLIC=localhost: webpack-dev-server --watch",
+        "build": "cross-env NODE_ENV=production ./node_modules/.bin/webpack",
+        "serve": "cross-env ENV=development PORT=3000 PROXY_URL=localhost webpack-dev-server --watch",
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     "author": "",
@@ -59,4 +58,3 @@
         "webpack-stream": "^4.0.1"
     }
 }
-

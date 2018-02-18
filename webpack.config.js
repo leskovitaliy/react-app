@@ -73,8 +73,8 @@ module.exports = {
 
     devServer: {
         port: port,
-        host: '0.0.0.0',
-        public: publicURL,
+        host: 'localhost',
+        open: true,
         proxy: [{
             context: ['/api/**'],
             changeOrigin: true,
