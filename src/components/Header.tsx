@@ -1,10 +1,10 @@
 import * as React from 'react';
 
+interface IHeader {
+  items: any;
+}
 
-class Header extends React.Component {
-    constructor(props) {
-        super(props);
-    }
+class Header extends React.Component<IHeader, {}> {
     render() {
         // console.log('items', this.props['items']);
         return (
